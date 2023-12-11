@@ -39,7 +39,7 @@ export default function Homepage(): JSX.Element {
         <Header />
       </Box>
       <Box display="flex" justifyContent="space-between" alignItems="center">
-        <Box paddingLeft="5rem">
+        <Box paddingLeft="10rem">
           <Typography
             marginTop="5rem"
             fontSize="3.5rem"

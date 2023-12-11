@@ -5,10 +5,8 @@ import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
-import { Link } from "@mui/material";
 import SwipeableDrawer from "@mui/material/SwipeableDrawer";
 import List from "@mui/material/List";
-import Button from "@mui/material/Button";
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
@@ -18,37 +16,6 @@ import logo from "../../Images/logos/logo.png";
 import navConfig from "./config";
 
 interface HeaderProps {}
-
-const ColorButton = styled(Button)(() => ({
-  color: "#fff",
-  width: 170,
-  height: 54,
-  fontWeight: 700,
-  fontSize: "16px",
-  textTransform: "capitalize",
-  backgroundColor: "#f04040",
-  border: "2px solid #f04040",
-  "&:hover": {
-    color: "#fff",
-    backgroundColor: "#f04040",
-    borderColor: "#f04040",
-  },
-}));
-const ColorButton2 = styled(Button)(() => ({
-  color: "#fff",
-  width: 170,
-  height: 54,
-  fontWeight: 700,
-  fontSize: "16px",
-  textTransform: "capitalize",
-  backgroundColor: "#f04040",
-  borderColor: "#f04040",
-  "&:hover": {
-    color: "#fff",
-    backgroundColor: "#f04040",
-    borderColor: "#f04040",
-  },
-}));
 
 const Header: React.FC<HeaderProps> = () => {
   const theme = useTheme();
@@ -110,7 +77,7 @@ const Header: React.FC<HeaderProps> = () => {
       alignItems={"center"}
       width={"100%"}
       marginBottom={{ xs: 2, sm: 0 }}
-      marginTop={{ xs: 2, sm: 0 }}
+      marginTop={{ xs: 2, sm: 2 }}
       id="back-to-top-anchor"
     >
       <Box
@@ -129,47 +96,6 @@ const Header: React.FC<HeaderProps> = () => {
         justifyContent={"space-between"}
         marginRight={{ xs: "0%", sm: "0%" }}
       >
-        <Box
-          sx={{ display: { xs: "none", md: "flex" } }}
-          alignItems={"center"}
-          justifyContent={"space-between"}
-          width={"100%"}
-          fontWeight={600}
-        >
-          <Box>
-            <Link
-              underline="always"
-              component="a"
-              href="/become-a-sitter"
-              color={"#000"}
-              fontWeight={600}
-              textTransform="capitalize"
-            >
-              Become a sitter
-            </Link>
-          </Box>
-          <Box
-            display={"flex"}
-            marginLeft={{ xs: "0%", sm: "0%" }}
-            justifyContent={"space-between"}
-            // flexWrap={"wrap"}
-            width={{ xs: "100%", sm: "50%" }}
-          >
-            <Box padding={{ xs: "5% 0% 1% 1%", sm: "5% 0% 1% 0%" }}>
-              <ColorButton variant="contained" size="medium" href={"/login"}>
-                Login
-              </ColorButton>
-            </Box>
-            <Box
-              padding={{ xs: "5% 2% 1% 1%", sm: "5% 2% 1% 4%" }}
-              display={{ xs: "none", sm: "block" }}
-            >
-              <ColorButton2 variant="contained" size="medium" href={"/signup"}>
-                Sign Up
-              </ColorButton2>
-            </Box>
-          </Box>
-        </Box>
         <Box sx={{ display: { xs: "flex", md: "none" } }} width={"100%"}>
           <div>
             <AppBar
